@@ -1,0 +1,51 @@
+body {
+	font-family: Verdana;
+	font-size: 11px;
+}
+.bodyContent {
+	width: 500px;
+	padding-top: 10px;	
+	padding-bottom: 10px;	
+	
+}
+.bodyContent .title {
+	font-size: 12px;
+	font-weight: bold;
+}
+.tr {
+	width: 500px;
+	float:left;
+}
+.th {
+	width: 25%;
+	float:left;
+	padding: 3px;
+	text-align: right;
+	font-weight: bold;
+}
+.td {
+	width: 65%;
+	float:left;
+	padding: 3px;
+}
+.clear {
+	clear: both;
+}
+.error{
+	font-weight: bold;
+	color:#FF0000;
+}
+.bold {
+	font-weight: bold;
+}
+button, select, input, textarea {
+	font-family: Verdana;
+	font-size: 11px;
+}
+.bodyHeader{
+	font-size: 14px;
+	font-weight: bold;
+}
+.bodyLinks a {
+	text-decoration: none;
+}

@@ -1,0 +1,33 @@
+body {
+	font-family: Verdana;
+	font-size: 11px;
+	background-color: #0066CC;
+	margin: 0px;
+	padding: 0px;
+}
+
+td, th, div, p, select, input, button, textarea, submit {
+	font-family: Verdana;
+	font-size: 11px;
+}
+
+
+.body-heading {
+	background-color: #0066CC;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.paddingme {
+	margin: 0px;
+	padding: 0px;
+}
+
+.border-content {
+	border: 1px solid #0099CC;
+}
+
+
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}

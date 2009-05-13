@@ -1,0 +1,11 @@
+1. Articles
+2. Blogs (Preparation of Official Blog For College Teacher, non-teacher and as well as students.)
+3. Event Notification
+4. Photo Gallery
+5. Exam Result Entry/View/Search
+6. Download section : Addmission Form/Tenders Form Downlaod
+7. Library Books Entry/View/Search (Online search option of Books from College Library)
+8. Student/Ex-student/Teachers Entry/View/Search (Online Database for College Students and as well as X-Students and there where abouts)
+9. Donation Acceptance through a page using Paypal or CCAvenue (Need a Admin section to view donations)
+
+10. Administration Panel
