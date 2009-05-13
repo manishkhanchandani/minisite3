@@ -1,0 +1,82 @@
+{literal}
+<script type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_validateForm() { //v4.0
+  var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+  for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=MM_findObj(args[i]);
+    if (val) { nm=val.name; if ((val=val.value)!="") {
+      if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+        if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+      } else if (test!='R') { num = parseFloat(val);
+        if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+        if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+          min=test.substring(8,p); max=test.substring(p+1);
+          if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+    } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+  } if (errors) alert('The following error(s) occurred:\n'+errors);
+  document.MM_returnValue = (errors == '');
+}
+//-->
+</script>
+{/literal}
+<div>
+	<div class="bodyHeader"><h2>Category Management</h2></div>
+	{if $breadCrumb}
+		<div class="breadcrumb">{$breadCrumb}</div>
+	{/if}
+	<div class="bodyContent">
+		<div class="title">Add New Category Under {if $current.category}{$current.category}{else}Root{/if}</div>
+		<div class="contents">
+			{if $errorMessage}
+				<div class="error">{$errorMessage}</div>
+			{/if}
+			<form name="frmNewCategory" id="frmNewCategory" method="post" action="" onsubmit="MM_validateForm('category','','R');return document.MM_returnValue">
+				<div class="tr">
+					<div class="th">
+					Category: 
+					</div>
+					<div class="td">
+					  <input type="text" name="category" value="" />
+					</div>
+				</div>
+				<div class="tr">
+					<div class="th">
+					
+					</div>
+					<div class="td">
+					 	<input type="submit" name="submit" value="Add New Category" />
+						<input name="site_id" type="hidden" id="site_id" value="{$ID}" />
+						<input name="module_id" type="hidden" id="module_id" value="{$MID}" />
+						{if $MIDDetails.setting_category_type == "Multiple"}
+							<input name="parent_id" type="hidden" id="parent_id" value="{$catId}" />
+						{elseif $MIDDetails.setting_category_type == "Single"}
+							<input name="parent_id" type="hidden" id="parent_id" value="0" />						  
+						{/if}
+						
+						<input name="user_id" type="hidden" id="user_id" value="{$smarty.cookies.user_id}" />
+						<input name="MM_Insert" type="hidden" id="MM_Insert" value="1" />
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	{if $records}
+		<div class="bodyContent">
+			<div class="title">Category Under {if $current.category}{$current.category}{else}Root{/if}</div>
+			<div class="contents">			
+				{foreach from=$records item=res}
+					<div><a href="{$HTTPPATH}/index.php?ID={$ID}&MID={$MID}&pg={$pg}&catId={$res.category_id}" class="alinks">{$res.category|stripslashes}</a></div>
+				{/foreach}			
+			</div>
+		</div>
+	{/if}
+</div>

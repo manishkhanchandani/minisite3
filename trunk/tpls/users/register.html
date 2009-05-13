@@ -1,0 +1,118 @@
+{literal}
+<style type="text/css">
+.frmDiv{
+	width:550px !important;
+	}
+
+fieldset.submit
+	{
+	padding-left: 190px !important;
+	}
+
+form label{
+	padding:0px 10px;
+	width: 160px;
+	}
+
+form label.error,
+form input.submit
+	{
+	margin-left:180px !important;
+	}		
+
+form fieldset fieldset label.error
+	{
+	margin-left:0px !important;
+	width:200px !important;
+	}		
+
+
+form .centered{
+	margin-left:180px !important;
+	width:200px !important;
+	}
+
+form .text, 
+form .button,
+form .group,
+form .control,
+form .submit,
+form textarea,
+form select
+	{
+	width: 200px !important;
+	}
+fieldset ul li{
+	padding-top: 10px;
+	list-style-type: none;
+}
+fieldset ul li label {
+	width: 150px;
+	float: left;
+	text-align:right;
+	font-weight:bold;
+}
+</style>
+
+{/literal}
+<div class="frmDiv">
+<form action="" method="post" id="register" name="register">
+<fieldset>
+	<legend>Register New User</legend>
+	{if $errorMessage != ""}
+		<div class="errorMessage">{$errorMessage}</div>
+	{/if}
+	{if $msg != ""}
+		<div class="errorMessage">{$msg}</div>
+	{/if}
+	<ul>
+		<li>
+			<label for="email"><span class="required">Email address*:</span></label>
+			<input id="email" name="email" type="text" size="32" />			
+			<div class="clear"></div>
+		</li>		
+		<li>
+			<label for="password"><span class="required">Password*:</span></label>
+			<input name="password" type="password" id="password" size="15" />		
+			<div class="clear"></div>
+		</li>
+		
+		<li>
+			<label for="password"><span class="required">Confirm Password*:</span></label>
+			<input name="confirm_password" type="password" id="confirm_password" size="15" />		
+			<div class="clear"></div>
+		</li>
+		<li>
+			<label for="name"><span class="required">Name*:</span></label>
+			<input id="name" name="name" type="text" size="25" />		
+			<div class="clear"></div>
+		</li>
+		<li>
+			<label for="agree">Please agree to our policy<span class="required">*</span>:</label>
+			<input type="checkbox" id="agree" name="agree" />		
+			<div class="clear"></div>
+		</li>		
+		{if $xtraFields}
+			{foreach from=$xtraFields item=xtra}
+				<li>
+					<label for="{$xtra.xtra_field}">{$xtra.xtra_field_label}:</label>
+					{if $xtra.type == "text"}
+						<input id="xtra_{$xtra.xtra_field}" name="xtra[{$xtra.xtra_field}]" type="text" value="{$xtra.xtra_field_value}" />
+					{elseif $xtra.type == "textarea"}
+						<textarea name="xtra[{$xtra.xtra_field}]" cols="45" rows="5">{$xtra.xtra_field_value}</textarea>
+					{/if}		
+					<div class="clear"></div>
+				</li>
+			{/foreach}
+		{/if}
+		<li>
+			<label for="submit">&nbsp;</label>
+			<input type="submit" class="button" value="Register Me!" />
+			<input name="MM_Type" type="hidden" id="MM_Type" value="register" />		
+			<div class="clear"></div>
+		</li>	
+	</ul>
+</fieldset>
+<div class="clear"></div>
+</form>
+</div>

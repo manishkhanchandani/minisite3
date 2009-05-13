@@ -1,0 +1,1535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+<head>
+<link rel="stylesheet" href="/v2/templates/default/css/screen_gray.css" type="text/css" />
+<link rel="stylesheet" href="http://digitalmusicplanet.com/v2/media/system/css/ajaxtabs.css" type="text/css" />
+<script type="text/javascript">
+var d, dom, ie, ie4, ie5x, moz, mac, win, lin, old, ie5mac, ie5xwin, op;
+
+var SITE_URL='http://digitalmusicplanet.com/v2/';
+
+d = document;
+n = navigator;
+na = n.appVersion;
+nua = n.userAgent;
+win = ( na.indexOf( 'Win' ) != -1 );
+//mac = ( na.indexOf( 'Mac' ) != -1 );
+//lin = ( nua.indexOf( 'Linux' ) != -1 );
+
+if ( !d.layers ){
+    dom = ( d.getElementById );
+    saf = ( nua.indexOf( 'Safari' ) != -1 );
+}
+
+</script>
+	  <link rel="stylesheet" href="/v2/templates/default/css/screen_gray_moz.css" type="text/css" />
+	  
+
+  <base href="http://digitalmusicplanet.com/v2/user/listener/com_user" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="latest, digital, music, planet, free, games, news, download, software, unique, compact, affordable, fun, Primary Section, primary_category, Welcome to Digital Music Planet it's your music community. It's 100% Free. Lots of MP3 legal downloads." />
+
+  <meta name="description" content="DigitalMusicPlanet.com - Committed to nring you the hottest music artists found anywhere. Have fun reading the latest digital music news stories, and downloading FREE music and software" />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Digital Music Planet - Listener Registration</title>
+  <link href="/v2/templates/default/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="stylesheet" href="/v2/media/system/css/formcheck.css" type="text/css" />
+  <link rel="stylesheet" href="/v2/media/system/css/default.css" type="text/css" />
+  <script type="text/javascript" src="/v2/media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="/v2/media/system/js/formcheck/lang/en.js"></script>
+
+  <script type="text/javascript" src="/v2/media/system/js/formcheck/formcheck.js"></script>
+  <script type="text/javascript" src="/v2/media/system/js/pwd_meter.js"></script>
+  <script type="text/javascript" src="/v2/media/system/js/ajax.js"></script>
+  <script type="text/javascript" src="/v2/media/system/js/captcha.js"></script>
+  <script type="text/javascript" src="/v2/media/system/js/openid.js"></script>
+  <script type="text/javascript">
+window.addEvent('domready', function(){
+			var accordion = new Accordion('h3.atStart', 'div.atStart', {
+				opacity: false,
+				onActive: function(toggler, element){
+					toggler.setStyle('color', '#FFF');
+					element.setStyle('height', 'auto');
+					toggler.setStyle('background', '#0AA3C6 url(http://digitalmusicplanet.com/v2//templates/default/images/bg_h3_over.jpg) no-repeat 10px center');
+				},
+				
+				onBackground: function(toggler, element){
+					toggler.setStyle('color', '#222');
+					toggler.setStyle('background', '#F2F2F2 url(http://digitalmusicplanet.com/v2//templates/default/images/bg_h3.jpg) no-repeat 10px center');
+				}
+			}, $('accordion'));
+		});
+		
+	
+		window.addEvent('domready', function(){
+	var box = $('box');
+	var fx = box.effects({duration: 5000, transition: Fx.Transitions.Quart.easeOut});
+	
+	fx.start({	
+			}).chain(function() {
+				//box.setHTML('Saved!');
+				this.start.delay(2000, this, {'opacity': 0});
+			}).chain(function() {
+				box.style.display='none';
+				this.start.delay(0001, this, {'opacity': 1});
+			});
+	}); 
+		
+		
+		
+	
+		window.addEvent('domready', function(){check = new FormCheck('josForm', {
+				display : {
+					fadeDuration : 500,
+					errorsLocation : 1,
+					indicateErrors : 1,
+					showErrors : 1
+					      }
+			})});
+	
+		function checkAvailability(container,url,name)
+					{ 
+					
+					if(name=='')
+						return false;
+					
+					$(container).setHTML('');		
+					//new Ajax(url, {method: 'get',update:$(container)}).request();
+					url='http://digitalmusicplanet.com/v2/index.php?option=com_user&task=check_name&no_html=1&uname=redddddd';
+					new Ajax(url, {method: 'post',update:$(container)}).request();
+					//url1='http://digitalmusicplanet.com/v2/user/check_name/com_user/1/'+name;
+				
+					
+					//new Ajax(url1, {method: 'get',update:$(container)}).request();
+					};
+var JLanguage = {}; JLanguage.WHAT_IS_OPENID = 'Login'; JLanguage.LOGIN_WITH_OPENID = 'Login with OpenId'; JLanguage.NORMAL_LOGIN = 'Go back to normal login'; var modlogin = 1;
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="http://digitalmusicplanet.com/v2/modules/mod_minifrontpage/css/style.css" title="default" />
+
+
+				
+
+
+
+
+
+
+
+<!--home page img preloading-->
+<style type="text/css">
+.hiddenPic {display:none;}
+* { behavior: url("http://digitalmusicplanet.com/v2/templates/default/css/iepngfix.htc") }
+</style>
+
+
+
+
+
+</head>
+<body id="page_bg" class="color_blue bg_blue width_fmax">
+
+
+ <div  class="clsBody " id="home"> 
+
+  <div id="top">
+    <ul>
+      <li><a href="#main">Skip to main content</a></li>
+      <li><a href="#selSubHeader">Skip to Navigation Links</a></li>
+      <li><a href="#footer">Skip to Footer</a></li>
+    </ul>
+  </div>
+
+   <!-- Head -->
+    <div id="selHead" class="clsClearFix">
+ <!-- Header -->
+ 	   <div id="header">
+      <div id="selLogo">
+        <h1><a  href="/v2"  >digitalmusicplanet.com</a></h1>
+      </div>
+    </div>
+
+    <!--end of header -->
+    <!--selSubHeader -->
+	
+    <div id="subHeader" >
+       <ul class="clsClearFix">
+	           <li class=""  ><a href="/v2/">Home</a></li>
+				
+		<li  class="" ><a  href="http://digitalmusicplanet.com/v2/index.php?option=com_content&view=page&page=featuredarticles" >Interviews</a></li>
+		
+        <li class="" ><a  href="/v2/videos/list" >Videos</a></li>
+
+		<li class="" ><a   href="http://digitalmusicplanet.com/v2/kunena" >Forum</a></li>
+
+		 <li class="" ><a  href="/v2/search" >Search</a></li>
+
+        <li class="" ><a  href="/v2/members" >Members</a></li>
+
+        <li  class="" ><a  href="/v2/albums" >Albums</a></li>
+      </ul>
+
+    </div>
+    <!--end of selSubHeader -->
+  </div>
+  <!--end of Head -->
+  <!--clsRounder-->
+  <div class="clsRounder"> 
+
+   <!--SideBar-->
+    <div id="sideBar">
+	
+	<!--SideBar1-->
+
+      <div id="sideBar1"> </div>
+      <!--end of SideBar1-->
+      <!--SideBar2-->
+	 
+      <div id="sideBar2">
+	 
+
+<!-- edited by CEI *exclude new components -->
+	  	<div id="accordion">
+            				
+<form action="/v2/user/com_user" method="post"  id="form-login">
+		  	    <h3 class="toggler atStart " >Member Login</h3>
+
+		<!--clsLogin-->
+        <div class="clsLogin element atStart" id="open_home">
+	   <table id="id_normal">
+            <tr>
+              <td  class="clsFormLabelCellDefault">Username</td>
+              <td  class="clsFormFieldCellDefault"><input id="modlgn_username" type="text" name="username" class="inputbox" alt="username" value=""  />	</td>
+            </tr>
+		    <tr id="form-login-password">
+
+              <td class="clsFormLabelCellDefault">Password</td>
+              <td class="clsFormFieldCellDefault">	<input id="modlgn_passwd" type="password" name="passwd" class="inputbox" alt="password" value="" /></td>
+            </tr>
+            <tr>
+			<td colspan="2">
+              <table class="clsRememberMe">
+			                  <tr>
+                  <td   class="clsFormLabelCellDefault1" ><div id="__rememberhide"><input  class="rememberChk" type="checkbox" name="RememberMe" value="true" tabindex="96" />
+
+                    <a><span class="rememberTxt">Remember Me</span></a></div></td>
+                  <td  class="clsFormFieldCellDefault1"><input type="submit" name="Submit" class="clsButton" value="Login" /></td>
+                </tr>
+				                <tr >
+                  <td colspan="2" class="clsForgetSignup"><p id="__rememberhide1"><a href="/v2/user/reset/com_user">Forgot your password?</a>&nbsp;<span><a href="/v2/user/signup/com_user">Signup</a></span></p></td>
+                </tr>
+              </table>
+
+            </td></tr>
+          </table>
+		 <div id="id_open" style="display:none;">
+			  <table>
+				<tr>
+				  <td  class="clsFormLabelCellDefault">Username</td>
+				  <td  class="clsFormFieldCellDefault"><input id="modlgn_username1" type="text" name="username1" class="inputbox" alt="username" value=""  />	<script type="text/javascript" id="__openidselector" src="http://digitalmusicplanet.com/v2/media/system/js/openid_selector.js" charset="utf-8"></script></td>
+
+				</tr>
+				
+				<tr>
+				<td colspan="2">
+				  <table class="clsRememberMe">
+				 
+					<tr>
+					  <td   class="clsFormLabelCellDefault1" >&nbsp;</td>
+					  <td  class="clsFormFieldCellDefault1"><input type="submit" name="Submit" class="clsButton" value="Login" /></td>
+					</tr>
+					
+					
+				  </table>
+
+				</td></tr>
+			  </table>
+		  </div>
+	<input type="hidden" name="option" value="com_user" />
+	<input type="hidden" name="task" value="login" />
+	<input type="hidden" name="user_log" value="user_log" />
+	<input type="hidden" name="return" value="aHR0cDovL2RpZ2l0YWxtdXNpY3BsYW5ldC5jb20vdjIvdXNlci9saXN0ZW5lci9jb21fdXNlcg==" />
+	<input type="hidden" name="c87efe9622b887fb8cbb9d628ae61edf" value="1" />	<div id="open_id"></div>
+
+	 </div>
+</form>
+<div id="temp" style="clear:both;"></div>
+
+		               
+<h3 class="toggler atStart">Top 10 Artists</h3>
+<div class="clsTodayArtist element atStart " >
+ <ul>	
+		 <li><a href="http://digitalmusicplanet.com/v2/Donsante"><span>1</span>Donsante</a></li>
+           	
+		 <li><a href="http://digitalmusicplanet.com/v2/CHUNFJ"><span>2</span>Futurejazz</a></li>
+
+           	
+		 <li><a href="http://digitalmusicplanet.com/v2/outofether"><span>3</span>outofether</a></li>
+           	
+		 <li><a href="http://digitalmusicplanet.com/v2/lonelyllama0"><span>4</span>Ken Dixon</a></li>
+           	
+		 <li><a href="http://digitalmusicplanet.com/v2/seeman"><span>5</span>SeeMan</a></li>
+           	
+		 <li><a href="http://digitalmusicplanet.com/v2/kilotips"><span>6</span>KILOTIPS</a></li>
+           	
+		 <li><a href="http://digitalmusicplanet.com/v2/broken llife support"><span>7</span>BROKEN LIFE SUPPORT</a></li>
+
+           	
+		 <li><a href="http://digitalmusicplanet.com/v2/SmidiBeats"><span>8</span>Smidi</a></li>
+           	
+		 <li><a href="http://digitalmusicplanet.com/v2/UnsignedDebut"><span>9</span>Unsigned Debut</a></li>
+            
+	    </ul>
+</div>
+			<h3 class="toggler atStart ">Recent Videos</h3>
+<div class="clsfeaturedArtist element atStart">
+  <table>
+
+		
+		<tr>
+		<td><!--clsfeaturedArtist-->
+	 		<a href="/v2/videos/show/143"><img src="http://digitalmusicplanet.com/v2/phpThumb.php?src=http://i3.ytimg.com/vi/jsQ5cwkWiyM/1.jpg&amp;h=58&amp;w=85&amp;far=C&amp;bg=FF0000&amp;f=png&amp;fltr[]=wmi|images/play.png|C|50&amp;fltr[]=bord|-1" alt=""/></a></td>
+		<td>
+			<div class="clsFeaturedCont">
+				<p class="clsName1">
+				pastor troy ...			</p>
+			<p class="clsName2"> 			pastor troy saddam</p>
+
+			</div>
+		</td>
+		</tr>
+		
+		<tr>
+		<td><!--clsfeaturedArtist-->
+	 		<a href="/v2/videos/show/142"><img src="http://digitalmusicplanet.com/v2/phpThumb.php?src=http://i1.ytimg.com/vi/Hi-CHJHtohc/1.jpg&amp;h=58&amp;w=85&amp;far=C&amp;bg=FF0000&amp;f=png&amp;fltr[]=wmi|images/play.png|C|50&amp;fltr[]=bord|-1" alt=""/></a></td>
+		<td>
+			<div class="clsFeaturedCont">
+				<p class="clsName1">
+
+				Jeezyft. Pas...			</p>
+			<p class="clsName2"> Jeezyft. Pastor Troy and Shawty...</p>
+			</div>
+		</td>
+		</tr>
+		
+		<tr>
+		<td><!--clsfeaturedArtist-->
+
+	 		<a href="/v2/videos/show/141"><img src="http://digitalmusicplanet.com/v2/phpThumb.php?src=http://i1.ytimg.com/vi/LhthN9Lth1o/1.jpg&amp;h=58&amp;w=85&amp;far=C&amp;bg=FF0000&amp;f=png&amp;fltr[]=wmi|images/play.png|C|50&amp;fltr[]=bord|-1" alt=""/></a></td>
+		<td>
+			<div class="clsFeaturedCont">
+				<p class="clsName1">
+				Lil Jon &amp; Pa...			</p>
+			<p class="clsName2"> Lil Jon &amp; Pastor Troy - Throw i...</p>
+
+			</div>
+		</td>
+		</tr>
+		
+		<tr>
+		<td><!--clsfeaturedArtist-->
+	 		<a href="/v2/videos/show/140"><img src="http://digitalmusicplanet.com/v2/phpThumb.php?src=http://i2.ytimg.com/vi/qvXaTfoJqWA/1.jpg&amp;h=58&amp;w=85&amp;far=C&amp;bg=FF0000&amp;f=png&amp;fltr[]=wmi|images/play.png|C|50&amp;fltr[]=bord|-1" alt=""/></a></td>
+		<td>
+			<div class="clsFeaturedCont">
+				<p class="clsName1">
+
+				Pastor Troy-...			</p>
+			<p class="clsName2"> Pastor Troy-Champion- Crunkest ...</p>
+			</div>
+		</td>
+		</tr>
+	  <tr><td>&nbsp;</td></tr>
+	    </table>
+
+</div> 
+			<h3 class="toggler atStart ">New Fans</h3>
+	<div class="clsfeaturedArtist  element atStart">
+		<table>
+		
+		  <tr>
+		    <td><!--clsfeaturedArtist-->
+	 		<div class="clsFeaturedCont1">
+				<a href="http://digitalmusicplanet.com/v2//listener/danithaj">
+					<img src="http://digitalmusicplanet.com/v2//timthumb.php?src=http://digitalmusicplanet.com/v2//media/system/images/nophoto_profile.gif&amp;h=63&amp;w=87&amp;zc=1" alt=""/></a><p class="clsName1">Danitha Jones</p><p class="clsName2">Hip Hop</p></div>
+
+		    </div>	<!--end of clsfeaturedArtist-->
+		    </td>
+		  </tr>
+		
+		  <tr>
+		    <td><!--clsfeaturedArtist-->
+	 		<div class="clsFeaturedCont1">
+				<a href="http://digitalmusicplanet.com/v2//listener/nkhancha">
+					<img src="http://digitalmusicplanet.com/v2//timthumb.php?src=http://digitalmusicplanet.com/v2//media/system/images/nophoto_profile.gif&amp;h=63&amp;w=87&amp;zc=1" alt=""/></a><p class="clsName1">renu chugh</p><p class="clsName2">Acoustic/Alternative</p></div>
+
+		    </div>	<!--end of clsfeaturedArtist-->
+		    </td>
+		  </tr>
+		
+		  <tr>
+		    <td><!--clsfeaturedArtist-->
+	 		<div class="clsFeaturedCont1">
+				<a href="http://digitalmusicplanet.com/v2//listener/rajesshh">
+					<img src="http://digitalmusicplanet.com/v2//timthumb.php?src=http://digitalmusicplanet.com/v2//media/system/images/nophoto_profile.gif&amp;h=63&amp;w=87&amp;zc=1" alt=""/></a><p class="clsName1">rajesh</p><p class="clsName2">Classical</p></div>
+
+		    </div>	<!--end of clsfeaturedArtist-->
+		    </td>
+		  </tr>
+		
+		  <tr>
+		    <td><!--clsfeaturedArtist-->
+	 		<div class="clsFeaturedCont1">
+				<a href="http://digitalmusicplanet.com/v2//listener/eco">
+					<img src="http://digitalmusicplanet.com/v2//timthumb.php?src=http://digitalmusicplanet.com/v2//media/system/images/nophoto_profile.gif&amp;h=63&amp;w=87&amp;zc=1" alt=""/></a><p class="clsName1">Erik</p><p class="clsName2">Gospel</p></div>
+
+		    </div>	<!--end of clsfeaturedArtist-->
+		    </td>
+		  </tr>
+		
+		  <tr>
+		    <td><!--clsfeaturedArtist-->
+	 		<div class="clsFeaturedCont1">
+				<a href="http://digitalmusicplanet.com/v2//listener/shinobikush1fan">
+					<img src="http://digitalmusicplanet.com/v2//timthumb.php?src=http://digitalmusicplanet.com/v2//media/system/photos/944c84dfe3leslie.jpg&amp;h=63&amp;w=87&amp;zc=1" alt=""/></a><p class="clsName1">miss king </p><p class="clsName2">Hip Hop</p></div>
+
+		    </div>	<!--end of clsfeaturedArtist-->
+		    </td>
+		  </tr>
+		</table>
+    </div>
+			
+			<!--<div style="height:auto; margin:0 10px 0 18px;padding:10px;">
+<a href="http://jigsaw.w3.org/css-validator/check?uri=referer" target="_blank">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+</a><a href="http://validator.w3.org/check?uri=referer" target="_blank">
+  <img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Strict" height="31" width="88" />
+ </a></div>-->
+
+			<!-- CEI code relocation -->
+			<!-- <div style="display:none;"> -->
+
+			<div>
+<!-- from v1 by CEI --><!-- for homepage only... by CEI -->
+		
+	
+	
+	
+	
+		<!-- end from v1 by CEI -->
+
+	
+			<!-- start amazon widget (homepage only): by CEI -->
+						<!-- end: by CEI -->
+			
+			<div align="center" style="width:250px;position:relative;left:17px;top:10px;">
+			
+<table width="100%" class="minifp"></table>
+			</div>
+
+			<!-- start amazon widget (homepage only): by CEI -->
+						<!-- end: by CEI -->
+			
+			<!-- start amazon widget: by CEI -->
+			<!-- SIDE COLUMN for INNER PAGES -->
+			<!-- start inner ads: by CEI -->
+			<div align="center" style="width:250px;position:relative;left:17px;top:10px;">
+
+			<!-- start inner widget: by CEI -->
+			<object type="application/x-shockwave-flash" data="http://widgets.clearspring.com/o/48e473a39b1d5b70/49f1d2f4f76293af/48eb1472aacad59f/e0b0c6e8" id="W48e473a39b1d5b7049f1d2f4f76293af" width="260" height="200"><param name="movie" value="http://widgets.clearspring.com/o/48e473a39b1d5b70/49f1d2f4f76293af/48eb1472aacad59f/e0b0c6e8" /><param name="wmode" value="transparent" /><param name="allowNetworking" value="all" /><param name="allowScriptAccess" value="always" /></object>
+
+			<!-- end widget: by CEI -->
+
+			<div class="bannergroup">
+	      <div class="bannerheader"></div>
+<!-- ORIG SIZE of embed... width="250" height="124"
+<div class="banneritem"><a href="http://click.linksynergy.com/fs-bin/click?id=gytGFVY9dDY&offerid=129871.10000183&type=4&subid=0" target="_blank"><IMG alt="Sirius Satellite Radio Inc." border="0" src="http://www.acronym.com/sirius/SIRIUS%20Banners/Promo1/300x250.gif" height="209" width="250"></a><IMG border="0" width="1" height="1" src="http://ad.linksynergy.com/fs-bin/show?id=gytGFVY9dDY&bids=129871.10000183&type=4&subid=0"><div class="clr"></div>
+          </div>
+		   -->
+<div class="banneritem"><a href="http://click.linksynergy.com/fs-bin/click?id=gytGFVY9dDY&offerid=148888.10000114&type=4&subid=0" target="_blank"><IMG alt="Save 20% on smartphone software and games at Handango.com with promo code SAVE20NOW." border="0" src="http://assets.handango.com/marketing/affiliate/SAVE20NOW/Newconcept/300x250.jpg" width="250" height="208"></a><IMG border="0" width="1" height="1" src="http://ad.linksynergy.com/fs-bin/show?id=gytGFVY9dDY&bids=148888.10000114&type=4&subid=0"><div class="clr"></div>
+
+          </div>
+	      <div class="bannerfooter">
+		  	      </div>
+</div>
+
+<table width="100%" class="minifp"></table>
+			</div>
+			<!-- end: by CEI -->
+
+			<div id="accordion" align="center">
+			<p>&nbsp;</p>
+			<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab" id="Player_98825fa3-b8e6-4564-96f1-3285148fcb0e"  WIDTH="250px" HEIGHT="250px"> <PARAM NAME="movie" VALUE="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Fdigimusiplan-20%2F8014%2F98825fa3-b8e6-4564-96f1-3285148fcb0e&Operation=GetDisplayTemplate"><PARAM NAME="quality" VALUE="high"><PARAM NAME="bgcolor" VALUE="#FFFFFF"><PARAM NAME="allowscriptaccess" VALUE="always"><embed src="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Fdigimusiplan-20%2F8014%2F98825fa3-b8e6-4564-96f1-3285148fcb0e&Operation=GetDisplayTemplate" id="Player_98825fa3-b8e6-4564-96f1-3285148fcb0e" quality="high" bgcolor="#ffffff" name="Player_98825fa3-b8e6-4564-96f1-3285148fcb0e" allowscriptaccess="always"  type="application/x-shockwave-flash" align="middle" height="250px" width="250px"></embed></OBJECT> <NOSCRIPT><A HREF="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Fdigimusiplan-20%2F8014%2F98825fa3-b8e6-4564-96f1-3285148fcb0e&Operation=NoScript">Amazon.com Widgets</A></NOSCRIPT>
+			<p>&nbsp;</p>
+
+			</div>
+			
+			<!-- end: by CEI -->
+<!-- end SIDE COLUMN for INNER *added a div -->
+			</div>
+			<!-- end CEI code relocation -->
+    </div>
+
+	
+
+ </div>
+ 
+
+    <!--end of SideBar-->
+	</div>
+
+	
+    <!--main-->
+    <div id="main">
+<img src="/v2/templates/default/images/logo.jpg" alt="dmp" height="96" width="260" class="hiddenPic"/>
+<img src="/v2/templates/default/images/subheader-over.jpg" alt="dmp" height="73" width="100" class="hiddenPic"/>
+<img src="/v2/templates/default/images/bg-h2.jpg" alt="dmp" height="39" width="37" class="hiddenPic"/>
+<img src="/v2/templates/default/images/rounter1.jpg" alt="dmp" height="20" width="1004" class="hiddenPic"/>
+<img src="/v2/templates/default/images/hometop.gif" alt="dmp" height="" width="428" class="hiddenPic"/>
+<img src="/v2/templates/default/images/homebottom.gif" alt="td-bg" height="" width="428" class="hiddenPic"/>
+<img src="/v2/templates/default/images/homecenter.jpg" alt="td-bg" height="" width="428" class="hiddenPic"/>
+<img src="/v2/templates/default/images/td-bg.jpg" alt="dmp" height="138" width="114" class="hiddenPic"/>
+<img src="/v2/templates/default/images/bg_h3.jpg" alt="dmp" height="21" width="21" class="hiddenPic"/>
+<img src="/v2/templates/default/images/bg_h3_over.jpg" alt="dmp" height="21" width="21" class="hiddenPic"/>
+<img src="/v2/templates/default/images/boder_shadow.jpg" alt="boder_shadow" height="32" width="672" class="hiddenPic"/>
+<!--home page img preloading-->
+	<!--clsMainAdverticement-->
+
+<!--end of clsMainAdverticement-->
+     <div  class="clsMainAdverticement">
+    <div class="bannergroup">
+</div>
+		<div align="center">
+			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="663" height="141" id="newheader" align="middle">
+			<param name="allowScriptAccess" value="sameDomain" />
+			<param name="movie" value="http://www.digitalmusicplanet.com/v2/templates/default/images/newheader.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://www.digitalmusicplanet.com/v2/templates/default/images/newheader.swf" quality="high" bgcolor="#ffffff" width="663" height="141" name="newheader" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+			</object>
+		</div>
+
+	
+	
+
+  </div>
+  <div id="box">
+	<div>
+	 <p></p>
+	</div>
+	</div>
+	
+	
+     
+<style type="text/css">
+  img { border: 1px solid #eee; }
+  p#statusgreen { font-size: 1.2em; background-color: #fff; color: #0a0; }
+  p#statusred { font-size: 1.2em; background-color: #fff; color: #a00; }
+  fieldset label { display: block; }
+  fieldset div#captchaimage { float: left; margin-right: 15px; }
+  fieldset input#captcha { width: 25%; border: 1px solid #ddd; padding: 2px; }
+  fieldset input#submit { display: block; margin: 2% 0% 0% 0%; }
+ </style>
+ 
+ <script>
+function clear_div()
+{
+	document.getElementById('msg').innerHTML ="";
+}
+
+
+</script>
+
+<div id="selSignUp">
+  <!--selRegisterForm-->
+  <div id="selRegisterForm">
+    <h2>LISTENER SIGNUP</h2>
+  </div>
+  <!--end of selRegisterForm-->
+  <form action="/v2/user/com_user" method="post" id="josForm" name="josForm" >
+     <!--selRegisterFormTable-->
+
+     <div id="selRegisterFormTable">
+     <table>
+        <tr>
+          <td colspan="2" >Account Information</td>
+        </tr>
+        <tr>
+          <td class="clsFormLabelCellDefault"><p><font color="red">*</font>
+            <label id="loginname" for="loginname"> Login Name: </label>
+
+            </p><p class="clsNoSpaces">No spaces or special characters.</p>
+		  </td>
+          <td class="clsFormFieldCellDefault"><input type="text" id="username" name="username" size="40" value="" class="validate['required','nodigit','alpha','length[3,-1]',]"  onfocus="clear_div()"/><p>
+		<img onclick="displayMessage1()" src="/v2/./images/checkavailability.jpg"/></p><div id="msg"></div>
+		 
+		</td>
+        </tr>
+        <tr>
+           <td class="clsFormLabelCellDefault"><p><font color="red">*</font>
+
+              <label id="password" for="password"> Password: </label>
+              </p>
+              <p class="clsNoSpaces">6 character minimum</p>
+		   </td>
+           <td class="clsFormFieldCellDefault"><input class="validate['required','length[6,-1]'] " type="password" id="password" name="password" size="40" value=""   autocomplete="off" onkeyup="chkPass(this.value);"  />
+								<input type="text" id="passwordTxt" name="passwordTxt"  autocomplete="off" onkeyup="chkPass(this.value);" class="hide" />
+           </td>
+
+        </tr>
+	    <tr>
+           <td class="clsFormLabelCellDefault"><p>
+             </p>
+           </td>
+           <td class="clsFormFieldCellDefault">  
+		     <div id="scorebarBorder">
+                 <div id="score">0%</div>
+                 <div id="scorebar">&nbsp;</div>
+
+             </div>
+			 <div id="complexity">Too Short</div>
+           </td>
+        </tr>
+		<tr>
+             <td class="clsFormLabelCellDefault">
+			    <p><font color="red">*</font>
+                   <label id="password1" for="password"> Confirm Password: </label>
+
+                </p>
+			 </td>
+             <td class="clsFormFieldCellDefault">
+			     <input class="validate['required','confirm[password]'] " type="password" id="confirmpassword" name="confirmpassword" size="40" value=""   autocomplete="off"   />
+			    
+             </td>
+          </tr>
+        <tr>
+          <td class="clsFormLabelCellDefault"><p><font color="red">*</font>
+
+            <label id="email" for="email"> E-mail Address: </label>
+            </p>
+            <p class="clsNoSpaces">Must be legit</p></td>
+          <td class="clsFormFieldCellDefault"><input type="text" id="email" name="email" size="40" value="" class="validate['required','email']"  /></td>
+        </tr>
+        <tr>
+          <td class="clsFormLabelCellDefault"><p><font color="red">*</font>
+
+            <label id="name" for="name"> Name: </label>
+            </p>
+            <p class="clsNoSpaces">As you want it to appear in your profile</p></td>
+          <td class="clsFormFieldCellDefault"><input type="text" name="name" id="name" size="40" value="" class="validate['required','length[3,-1]','nodigit']"  /></td>
+        </tr>
+        <tr>
+          <td class="clsFormLabelCellDefault"><p><font color="red">*</font>
+
+            <label id="gender" for="gender"> Gender: </label>
+            </p>
+		  </td>
+          <td class="clsFormFieldCellDefault"><input type="radio" name="gender" value="male" class="clsRadioBtn" checked="checked" />
+            Male            <input type="radio" value="female" name="gender" class="clsRadioBtn"  />
+          Female		  </td>
+        </tr>
+
+        <tr>
+          <td class="clsFormLabelCellDefault"><p><font color="red">*</font>
+            <label id="dob" for="dob"> Birth Date: </label>
+            </p>
+            <p class="clsNoSpaces"></p></td>
+          <td class="clsFormFieldCellDefault">
+		    		    <select name="month" onchange="load_day(this.value)">
+
+				<option value="01" id="01" >Jan</option>
+				<option value="02" >Feb</option>
+				<option value="03" >Mar</option>
+				<option value="04" >Apr</option>
+				<option value="05" >May</option>
+				<option value="06" >Jun</option>
+
+				<option value="07" >Jul</option>
+				<option value="08" >Aug</option>
+				<option value="09" >Sep</option>
+				<option value="10" >Oct</option>
+				<option value="11" >Nov</option>
+				<option value="12" >Dec</option>
+
+            </select>
+            <select name="day">
+		                 <option value="1"  >1</option>
+			            <option value="2"  >2</option>
+			            <option value="3"  >3</option>
+			            <option value="4"  >4</option>
+			            <option value="5"  >5</option>
+
+			            <option value="6"  >6</option>
+			            <option value="7"  >7</option>
+			            <option value="8"  >8</option>
+			            <option value="9"  >9</option>
+			            <option value="10"  >10</option>
+			            <option value="11"  >11</option>
+
+			            <option value="12"  >12</option>
+			            <option value="13"  >13</option>
+			            <option value="14"  >14</option>
+			            <option value="15"  >15</option>
+			            <option value="16"  >16</option>
+			            <option value="17"  >17</option>
+
+			            <option value="18"  >18</option>
+			            <option value="19"  >19</option>
+			            <option value="20"  >20</option>
+			            <option value="21"  >21</option>
+			            <option value="22"  >22</option>
+			            <option value="23"  >23</option>
+
+			            <option value="24"  >24</option>
+			            <option value="25"  >25</option>
+			            <option value="26"  >26</option>
+			            <option value="27"  >27</option>
+			            <option value="28"  >28</option>
+			            <option value="29"  >29</option>
+
+			            <option value="30"  >30</option>
+			            <option value="31"  >31</option>
+			            </select>
+            <select id="" name="year" class="year"  >
+		                    <option value="$1996"  >1996</option>
+           	              <option value="$1995"  >1995</option>
+           	              <option value="$1994"  >1994</option>
+
+           	              <option value="$1993"  >1993</option>
+           	              <option value="$1992"  >1992</option>
+           	              <option value="$1991"  >1991</option>
+           	              <option value="$1990"  >1990</option>
+           	              <option value="$1989"  >1989</option>
+           	              <option value="$1988"  >1988</option>
+
+           	              <option value="$1987"  >1987</option>
+           	              <option value="$1986"  >1986</option>
+           	              <option value="$1985"  >1985</option>
+           	              <option value="$1984"  >1984</option>
+           	              <option value="$1983"  >1983</option>
+           	              <option value="$1982"  >1982</option>
+
+           	              <option value="$1981"  >1981</option>
+           	              <option value="$1980"  >1980</option>
+           	              <option value="$1979"  >1979</option>
+           	              <option value="$1978"  >1978</option>
+           	              <option value="$1977"  >1977</option>
+           	              <option value="$1976"  >1976</option>
+
+           	              <option value="$1975"  >1975</option>
+           	              <option value="$1974"  >1974</option>
+           	              <option value="$1973"  >1973</option>
+           	              <option value="$1972"  >1972</option>
+           	              <option value="$1971"  >1971</option>
+           	              <option value="$1970"  >1970</option>
+
+           	              <option value="$1969"  >1969</option>
+           	              <option value="$1968"  >1968</option>
+           	              <option value="$1967"  >1967</option>
+           	              <option value="$1966"  >1966</option>
+           	              <option value="$1965"  >1965</option>
+           	              <option value="$1964"  >1964</option>
+
+           	              <option value="$1963"  >1963</option>
+           	              <option value="$1962"  >1962</option>
+           	              <option value="$1961"  >1961</option>
+           	              <option value="$1960"  >1960</option>
+           	              <option value="$1959"  >1959</option>
+           	              <option value="$1958"  >1958</option>
+
+           	              <option value="$1957"  >1957</option>
+           	              <option value="$1956"  >1956</option>
+           	              <option value="$1955"  >1955</option>
+           	              <option value="$1954"  >1954</option>
+           	              <option value="$1953"  >1953</option>
+           	              <option value="$1952"  >1952</option>
+
+           	              <option value="$1951"  >1951</option>
+           	              <option value="$1950"  >1950</option>
+           	              <option value="$1949"  >1949</option>
+           	              <option value="$1948"  >1948</option>
+           	              <option value="$1947"  >1947</option>
+           	              <option value="$1946"  >1946</option>
+
+           	              <option value="$1945"  >1945</option>
+           	              <option value="$1944"  >1944</option>
+           	              <option value="$1943"  >1943</option>
+           	              <option value="$1942"  >1942</option>
+           	              <option value="$1941"  >1941</option>
+           	            </select>
+
+          </td>
+       </tr>
+       <tr>
+          <td class="clsFormLabelCellDefault"><p><font color="red">*</font>
+            <label id="country" for="country"> Country: </label>
+            </p>
+            <p class="clsNoSpaces"></p></td>
+
+          <td class="clsFormFieldCellDefault">            <select name="country" class="clsCnt">
+		      <option value="">Select Country</option>
+                            <option value="Afghanistan" >
+              Afghanistan              </option>
+                            <option value="Albania" >
+              Albania              </option>
+                            <option value="Algeria" >
+
+              Algeria              </option>
+                            <option value="American Samoa" >
+              American Samoa              </option>
+                            <option value="Andorra" >
+              Andorra              </option>
+                            <option value="Angola" >
+              Angola              </option>
+
+                            <option value="Anguilla" >
+              Anguilla              </option>
+                            <option value="Antarctica" >
+              Antarctica              </option>
+                            <option value="Antigua and Barbuda" >
+              Antigua and Barbuda              </option>
+                            <option value="Argentina" >
+
+              Argentina              </option>
+                            <option value="Armenia" >
+              Armenia              </option>
+                            <option value="Aruba" >
+              Aruba              </option>
+                            <option value="Australia" >
+              Australia              </option>
+
+                            <option value="Austria" >
+              Austria              </option>
+                            <option value="Azerbaijan" >
+              Azerbaijan              </option>
+                            <option value="Bahamas" >
+              Bahamas              </option>
+                            <option value="Bahrain" >
+
+              Bahrain              </option>
+                            <option value="Bangladesh" >
+              Bangladesh              </option>
+                            <option value="Barbados" >
+              Barbados              </option>
+                            <option value="Belarus" >
+              Belarus              </option>
+
+                            <option value="Belgium" >
+              Belgium              </option>
+                            <option value="Belize" >
+              Belize              </option>
+                            <option value="Benin" >
+              Benin              </option>
+                            <option value="Bermuda" >
+
+              Bermuda              </option>
+                            <option value="Bhutan" >
+              Bhutan              </option>
+                            <option value="Bolivia" >
+              Bolivia              </option>
+                            <option value="Bosnia and Herzegovina" >
+              Bosnia and Herzegovina              </option>
+
+                            <option value="Botswana" >
+              Botswana              </option>
+                            <option value="Bouvet Island" >
+              Bouvet Island              </option>
+                            <option value="Brazil" >
+              Brazil              </option>
+                            <option value="British Indian Ocean Territory" >
+
+              British Indian Ocean Territory              </option>
+                            <option value="Brunei Darussalam" >
+              Brunei Darussalam              </option>
+                            <option value="Bulgaria" >
+              Bulgaria              </option>
+                            <option value="Burkina Faso" >
+              Burkina Faso              </option>
+
+                            <option value="Burundi" >
+              Burundi              </option>
+                            <option value="Cambodia" >
+              Cambodia              </option>
+                            <option value="Cameroon" >
+              Cameroon              </option>
+                            <option value="Canada" >
+
+              Canada              </option>
+                            <option value="Cape Verde" >
+              Cape Verde              </option>
+                            <option value="Cayman Islands" >
+              Cayman Islands              </option>
+                            <option value="Central African Republic" >
+              Central African Republic              </option>
+
+                            <option value="Chad" >
+              Chad              </option>
+                            <option value="Chile" >
+              Chile              </option>
+                            <option value="China" >
+              China              </option>
+                            <option value="Christmas Island" >
+
+              Christmas Island              </option>
+                            <option value="Cocos (Keeling) Islands" >
+              Cocos (Keeling) Islands              </option>
+                            <option value="Colombia" >
+              Colombia              </option>
+                            <option value="Comoros" >
+              Comoros              </option>
+
+                            <option value="Congo" >
+              Congo              </option>
+                            <option value="Congo, the Democratic Republic of the" >
+              Congo, the Democratic Republic of the              </option>
+                            <option value="Cook Islands" >
+              Cook Islands              </option>
+                            <option value="Costa Rica" >
+
+              Costa Rica              </option>
+                            <option value="Cote D'Ivoire" >
+              Cote D'Ivoire              </option>
+                            <option value="Croatia" >
+              Croatia              </option>
+                            <option value="Cuba" >
+              Cuba              </option>
+
+                            <option value="Cyprus" >
+              Cyprus              </option>
+                            <option value="Czech Republic" >
+              Czech Republic              </option>
+                            <option value="Denmark" >
+              Denmark              </option>
+                            <option value="Djibouti" >
+
+              Djibouti              </option>
+                            <option value="Dominica" >
+              Dominica              </option>
+                            <option value="Dominican Republic" >
+              Dominican Republic              </option>
+                            <option value="Ecuador" >
+              Ecuador              </option>
+
+                            <option value="Egypt" >
+              Egypt              </option>
+                            <option value="El Salvador" >
+              El Salvador              </option>
+                            <option value="Equatorial Guinea" >
+              Equatorial Guinea              </option>
+                            <option value="Eritrea" >
+
+              Eritrea              </option>
+                            <option value="Estonia" >
+              Estonia              </option>
+                            <option value="Ethiopia" >
+              Ethiopia              </option>
+                            <option value="Falkland Islands (Malvinas)" >
+              Falkland Islands (Malvinas)              </option>
+
+                            <option value="Faroe Islands" >
+              Faroe Islands              </option>
+                            <option value="Fiji" >
+              Fiji              </option>
+                            <option value="Finland" >
+              Finland              </option>
+                            <option value="France" >
+
+              France              </option>
+                            <option value="French Guiana" >
+              French Guiana              </option>
+                            <option value="French Polynesia" >
+              French Polynesia              </option>
+                            <option value="French Southern Territories" >
+              French Southern Territories              </option>
+
+                            <option value="Gabon" >
+              Gabon              </option>
+                            <option value="Gambia" >
+              Gambia              </option>
+                            <option value="Georgia" >
+              Georgia              </option>
+                            <option value="Germany" >
+
+              Germany              </option>
+                            <option value="Ghana" >
+              Ghana              </option>
+                            <option value="Gibraltar" >
+              Gibraltar              </option>
+                            <option value="Greece" >
+              Greece              </option>
+
+                            <option value="Greenland" >
+              Greenland              </option>
+                            <option value="Grenada" >
+              Grenada              </option>
+                            <option value="Guadeloupe" >
+              Guadeloupe              </option>
+                            <option value="Guam" >
+
+              Guam              </option>
+                            <option value="Guatemala" >
+              Guatemala              </option>
+                            <option value="Guinea" >
+              Guinea              </option>
+                            <option value="Guinea-Bissau" >
+              Guinea-Bissau              </option>
+
+                            <option value="Guyana" >
+              Guyana              </option>
+                            <option value="Haiti" >
+              Haiti              </option>
+                            <option value="Heard Island and Mcdonald Islands" >
+              Heard Island and Mcdonald Islands              </option>
+                            <option value="Holy See (Vatican City State)" >
+
+              Holy See (Vatican City State)              </option>
+                            <option value="Honduras" >
+              Honduras              </option>
+                            <option value="Hong Kong" >
+              Hong Kong              </option>
+                            <option value="Hungary" >
+              Hungary              </option>
+
+                            <option value="Iceland" >
+              Iceland              </option>
+                            <option value="India" >
+              India              </option>
+                            <option value="Indonesia" >
+              Indonesia              </option>
+                            <option value="Iran, Islamic Republic of" >
+
+              Iran, Islamic Republic of              </option>
+                            <option value="Iraq" >
+              Iraq              </option>
+                            <option value="Ireland" >
+              Ireland              </option>
+                            <option value="Israel" >
+              Israel              </option>
+
+                            <option value="Italy" >
+              Italy              </option>
+                            <option value="Jamaica" >
+              Jamaica              </option>
+                            <option value="Japan" >
+              Japan              </option>
+                            <option value="Jordan" >
+
+              Jordan              </option>
+                            <option value="Kazakhstan" >
+              Kazakhstan              </option>
+                            <option value="Kenya" >
+              Kenya              </option>
+                            <option value="Kiribati" >
+              Kiribati              </option>
+
+                            <option value="Korea, Democratic People's Republic of" >
+              Korea, Democratic People's Republic of              </option>
+                            <option value="Korea, Republic of" >
+              Korea, Republic of              </option>
+                            <option value="Kuwait" >
+              Kuwait              </option>
+                            <option value="Kyrgyzstan" >
+
+              Kyrgyzstan              </option>
+                            <option value="Lao People's Democratic Republic" >
+              Lao People's Democratic Republic              </option>
+                            <option value="Latvia" >
+              Latvia              </option>
+                            <option value="Lebanon" >
+              Lebanon              </option>
+
+                            <option value="Lesotho" >
+              Lesotho              </option>
+                            <option value="Liberia" >
+              Liberia              </option>
+                            <option value="Libyan Arab Jamahiriya" >
+              Libyan Arab Jamahiriya              </option>
+                            <option value="Liechtenstein" >
+
+              Liechtenstein              </option>
+                            <option value="Lithuania" >
+              Lithuania              </option>
+                            <option value="Luxembourg" >
+              Luxembourg              </option>
+                            <option value="Macao" >
+              Macao              </option>
+
+                            <option value="Macedonia, the Former Yugoslav Republic of" >
+              Macedonia, the Former Yugoslav Republic of              </option>
+                            <option value="Madagascar" >
+              Madagascar              </option>
+                            <option value="Malawi" >
+              Malawi              </option>
+                            <option value="Malaysia" >
+
+              Malaysia              </option>
+                            <option value="Maldives" >
+              Maldives              </option>
+                            <option value="Mali" >
+              Mali              </option>
+                            <option value="Malta" >
+              Malta              </option>
+
+                            <option value="Marshall Islands" >
+              Marshall Islands              </option>
+                            <option value="Martinique" >
+              Martinique              </option>
+                            <option value="Mauritania" >
+              Mauritania              </option>
+                            <option value="Mauritius" >
+
+              Mauritius              </option>
+                            <option value="Mayotte" >
+              Mayotte              </option>
+                            <option value="Mexico" >
+              Mexico              </option>
+                            <option value="Micronesia, Federated States of" >
+              Micronesia, Federated States of              </option>
+
+                            <option value="Moldova, Republic of" >
+              Moldova, Republic of              </option>
+                            <option value="Monaco" >
+              Monaco              </option>
+                            <option value="Mongolia" >
+              Mongolia              </option>
+                            <option value="Montserrat" >
+
+              Montserrat              </option>
+                            <option value="Morocco" >
+              Morocco              </option>
+                            <option value="Mozambique" >
+              Mozambique              </option>
+                            <option value="Myanmar" >
+              Myanmar              </option>
+
+                            <option value="Namibia" >
+              Namibia              </option>
+                            <option value="Nauru" >
+              Nauru              </option>
+                            <option value="Nepal" >
+              Nepal              </option>
+                            <option value="Netherlands" >
+
+              Netherlands              </option>
+                            <option value="Netherlands Antilles" >
+              Netherlands Antilles              </option>
+                            <option value="New Caledonia" >
+              New Caledonia              </option>
+                            <option value="New Zealand" >
+              New Zealand              </option>
+
+                            <option value="Nicaragua" >
+              Nicaragua              </option>
+                            <option value="Niger" >
+              Niger              </option>
+                            <option value="Nigeria" >
+              Nigeria              </option>
+                            <option value="Niue" >
+
+              Niue              </option>
+                            <option value="Norfolk Island" >
+              Norfolk Island              </option>
+                            <option value="Northern Mariana Islands" >
+              Northern Mariana Islands              </option>
+                            <option value="Norway" >
+              Norway              </option>
+
+                            <option value="Oman" >
+              Oman              </option>
+                            <option value="Pakistan" >
+              Pakistan              </option>
+                            <option value="Palau" >
+              Palau              </option>
+                            <option value="Palestinian Territory, Occupied" >
+
+              Palestinian Territory, Occupied              </option>
+                            <option value="Panama" >
+              Panama              </option>
+                            <option value="Papua New Guinea" >
+              Papua New Guinea              </option>
+                            <option value="Paraguay" >
+              Paraguay              </option>
+
+                            <option value="Peru" >
+              Peru              </option>
+                            <option value="Philippines" >
+              Philippines              </option>
+                            <option value="Pitcairn" >
+              Pitcairn              </option>
+                            <option value="Poland" >
+
+              Poland              </option>
+                            <option value="Portugal" >
+              Portugal              </option>
+                            <option value="Puerto Rico" >
+              Puerto Rico              </option>
+                            <option value="Qatar" >
+              Qatar              </option>
+
+                            <option value="Reunion" >
+              Reunion              </option>
+                            <option value="Romania" >
+              Romania              </option>
+                            <option value="Russian Federation" >
+              Russian Federation              </option>
+                            <option value="Rwanda" >
+
+              Rwanda              </option>
+                            <option value="Saint Helena" >
+              Saint Helena              </option>
+                            <option value="Saint Kitts and Nevis" >
+              Saint Kitts and Nevis              </option>
+                            <option value="Saint Lucia" >
+              Saint Lucia              </option>
+
+                            <option value="Saint Pierre and Miquelon" >
+              Saint Pierre and Miquelon              </option>
+                            <option value="Saint Vincent and the Grenadines" >
+              Saint Vincent and the Grenadines              </option>
+                            <option value="Samoa" >
+              Samoa              </option>
+                            <option value="San Marino" >
+
+              San Marino              </option>
+                            <option value="Sao Tome and Principe" >
+              Sao Tome and Principe              </option>
+                            <option value="Saudi Arabia" >
+              Saudi Arabia              </option>
+                            <option value="Senegal" >
+              Senegal              </option>
+
+                            <option value="Serbia and Montenegro" >
+              Serbia and Montenegro              </option>
+                            <option value="Seychelles" >
+              Seychelles              </option>
+                            <option value="Sierra Leone" >
+              Sierra Leone              </option>
+                            <option value="Singapore" >
+
+              Singapore              </option>
+                            <option value="Slovakia" >
+              Slovakia              </option>
+                            <option value="Slovenia" >
+              Slovenia              </option>
+                            <option value="Solomon Islands" >
+              Solomon Islands              </option>
+
+                            <option value="Somalia" >
+              Somalia              </option>
+                            <option value="South Africa" >
+              South Africa              </option>
+                            <option value="South Georgia and the South Sandwich Islands" >
+              South Georgia and the South Sandwich Islands              </option>
+                            <option value="Spain" >
+
+              Spain              </option>
+                            <option value="Sri Lanka" >
+              Sri Lanka              </option>
+                            <option value="Sudan" >
+              Sudan              </option>
+                            <option value="Suriname" >
+              Suriname              </option>
+
+                            <option value="Svalbard and Jan Mayen" >
+              Svalbard and Jan Mayen              </option>
+                            <option value="Swaziland" >
+              Swaziland              </option>
+                            <option value="Sweden" >
+              Sweden              </option>
+                            <option value="Switzerland" >
+
+              Switzerland              </option>
+                            <option value="Syrian Arab Republic" >
+              Syrian Arab Republic              </option>
+                            <option value="Taiwan, Province of China" >
+              Taiwan, Province of China              </option>
+                            <option value="Tajikistan" >
+              Tajikistan              </option>
+
+                            <option value="Tanzania, United Republic of" >
+              Tanzania, United Republic of              </option>
+                            <option value="Thailand" >
+              Thailand              </option>
+                            <option value="Timor-Leste" >
+              Timor-Leste              </option>
+                            <option value="Togo" >
+
+              Togo              </option>
+                            <option value="Tokelau" >
+              Tokelau              </option>
+                            <option value="Tonga" >
+              Tonga              </option>
+                            <option value="Trinidad and Tobago" >
+              Trinidad and Tobago              </option>
+
+                            <option value="Tunisia" >
+              Tunisia              </option>
+                            <option value="Turkey" >
+              Turkey              </option>
+                            <option value="Turkmenistan" >
+              Turkmenistan              </option>
+                            <option value="Turks and Caicos Islands" >
+
+              Turks and Caicos Islands              </option>
+                            <option value="Tuvalu" >
+              Tuvalu              </option>
+                            <option value="Uganda" >
+              Uganda              </option>
+                            <option value="Ukraine" >
+              Ukraine              </option>
+
+                            <option value="United Arab Emirates" >
+              United Arab Emirates              </option>
+                            <option value="United Kingdom" >
+              United Kingdom              </option>
+                            <option value="United States" >
+              United States              </option>
+                            <option value="United States Minor Outlying Islands" >
+
+              United States Minor Outlying Islands              </option>
+                            <option value="Uruguay" >
+              Uruguay              </option>
+                            <option value="Uzbekistan" >
+              Uzbekistan              </option>
+                            <option value="Vanuatu" >
+              Vanuatu              </option>
+
+                            <option value="Venezuela" >
+              Venezuela              </option>
+                            <option value="Viet Nam" >
+              Viet Nam              </option>
+                            <option value="Virgin Islands, British" >
+              Virgin Islands, British              </option>
+                            <option value="Virgin Islands, U.s." >
+
+              Virgin Islands, U.s.              </option>
+                            <option value="Wallis and Futuna" >
+              Wallis and Futuna              </option>
+                            <option value="Western Sahara" >
+              Western Sahara              </option>
+                            <option value="Yemen" >
+              Yemen              </option>
+
+                            <option value="Zambia" >
+              Zambia              </option>
+                            <option value="Zimbabwe" >
+              Zimbabwe              </option>
+                          </select>
+         </td>
+       </tr>
+       <tr>
+
+        <td class="clsFormLabelCellDefault"><p><font color="red">*</font>
+            <label id="zipcode" for="zipcode"> Zip/Postal Code: </label>
+            </p>
+            <p class="clsNoSpaces"></p></td>
+        <td class="clsFormFieldCellDefault"><input type="text" name="zipcode" value="" class="validate['required','length[3,-1]','digit'] clsZip"/></td>
+      </tr>
+	  <tr>
+
+        <td class="clsFormLabelCellDefault"><p><font color="red">*</font>
+            <label id="zipcode" for="zipcode"> Choose your Genres1: </label>
+            </p>
+            <p class="clsNoSpaces"></p></td>
+        <td class="clsFormFieldCellDefault">
+					    <select id="" name="genre_id_1" class="clsCnt">
+		      		      <option value="8" >Acoustic</option>
+
+		     		      <option value="12" >Alternative</option>
+		     		      <option value="13" >Beats/Instrumentals</option>
+		     		      <option value="14" >Blues</option>
+		     		      <option value="15" >Classical</option>
+		     		      <option value="16" >Country</option>
+		     		      <option value="17" >Electronica</option>
+
+		     		      <option value="18" >Hip Hop</option>
+		     		      <option value="19" >Jazz</option>
+		     		      <option value="20" >Latin</option>
+		     		      <option value="21" >Metal</option>
+		     		      <option value="22" >Pop</option>
+		     		      <option value="23" >Rock</option>
+
+		     		      <option value="24" >Urban/R&B</option>
+		     		      <option value="25" >World</option>
+		     		      <option value="26" >Gospel</option>
+		     		    </select>
+		</td>
+      </tr>
+	  <tr>
+
+        <td class="clsFormLabelCellDefault"><p>
+            <label id="zipcode" for="zipcode"> Choose your Genres2: </label>
+            </p>
+            <p class="clsNoSpaces"></p>
+		</td>
+        <td class="clsFormFieldCellDefault">
+		   		   <select id="" name="genre_id_2" class="clsCnt"><option value="" selected="selected">Optional</option>
+
+		     		     <option value="8" >Acoustic</option>
+		     		     <option value="12" >Alternative</option>
+		     		     <option value="13" >Beats/Instrumentals</option>
+		     		     <option value="14" >Blues</option>
+		     		     <option value="15" >Classical</option>
+		     		     <option value="16" >Country</option>
+
+		     		     <option value="17" >Electronica</option>
+		     		     <option value="18" >Hip Hop</option>
+		     		     <option value="19" >Jazz</option>
+		     		     <option value="20" >Latin</option>
+		     		     <option value="21" >Metal</option>
+		     		     <option value="22" >Pop</option>
+
+		     		     <option value="23" >Rock</option>
+		     		     <option value="24" >Urban/R&B</option>
+		     		     <option value="25" >World</option>
+		     		     <option value="26" >Gospel</option>
+		     </select></td>
+        </tr>
+        <tr>
+
+          <td class="clsFormLabelCellDefault"><p><font color="red">*</font> Enter the words in the image as you see them on the right</p>
+             <p class="clsNoSpaces"></p></td>
+          <td class="clsFormFieldCellDefault"> 
+		  <script>var RecaptchaOptions = {theme : 'white'};</script><script type="text/javascript" src="http://api.recaptcha.net/challenge?k=6LfzVgUAAAAAAKahiqDgdpqUiyhFqeFIksW4SQ-4"></script>
+	    <noscript>
+		   <iframe src="http://api.recaptcha.net/noscript?k=6LfzVgUAAAAAAKahiqDgdpqUiyhFqeFIksW4SQ-4" height="300" width="500" frameborder="0"></iframe><br/>
+		   <textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+		   <input type="hidden" name="recaptcha_response_field" value="manual_challenge" />
+	    </noscript>         </td>
+       </tr>
+
+       <tr>
+         <td class="clsFormLabelCellDefault"><p><font color="red">*</font>
+            <label id="terms" for="terms"> Terms of Service: </label>
+            </p>
+            <p class="clsNoSpaces"></p></td>
+         <td class="clsFormFieldCellDefault">
+		    <table class="clsKeyWord">
+
+               <tr>
+                  <td class="clsTermsOfServices"><input type="checkbox" name="TermsOfServices[]" class=" validate['required']" >
+                     I have read and agree with the<a href="/v2/index.php?option=com_content&amp;view=page&amp;page=terms" target="_blank"> <span>Digital Music Planet Terms of Use.</span></a></td>
+               </tr>
+               <tr>
+                  <td class="clsTermsOfServices"><input type="checkbox" name="TermsOfServices[]" class="validate['required']" >
+                     I have read and agree with the<a href="/v2/index.php?option=com_content&amp;view=page&amp;page=listeneragreement" target="_blank"> <span>Digital Music Planet Listener Agreement.</span></a>
+
+				  </td>
+               </tr>
+            </table>
+		 </td>
+	  </tr>
+      <tr>
+        <td colspan="2" class="clsBtn"><input class="button validate" type="submit" onclick="check1(); return;"  value="Create my Listener Account" />
+		          <input type="hidden" name="task" value="register_save" />
+		  <input type="hidden" name="user_type" value="listener" />
+
+          <input type="hidden" name="id" value="0" />
+          <input type="hidden" name="gid" value="0" />
+        </td>
+      </tr>
+    </table>
+    <input type="hidden" name="c87efe9622b887fb8cbb9d628ae61edf" value="1" />  </form>
+</div>
+</div>
+<script type="text/javascript">
+
+var base = 'http://digitalmusicplanet.com/v2/';
+var ajax = new sack();
+function displayMessage1()
+{
+	var temp=document.getElementById('username').value;
+	if(temp=="")
+	 return false;
+	var base = 'http://digitalmusicplanet.com/v2/';
+	var url = base+'index.php?option=com_user&task=check_name&no_html=1&uname='+document.getElementById('username').value;
+	ajax.requestFile = url;	// Specifying which file to get
+	ajax.onCompletion = showClientData;	// Specify function that will be executed after file has been found
+	ajax.runAJAX();		// Execute AJAX function
+	
+}
+function showClientData()
+{
+	var res = ajax.response;
+	
+	document.getElementById('msg').innerHTML = res;
+
+}
+
+
+</script>
+
+
+	
+	<!-- show FAQ -->	<!-- end isolated show -->
+
+		<!-- for homepage only... by CEI -->
+		 
+    </div> <!--end of main-->
+   
+ <!--end of clsBody-->
+  <div id="footer">
+<table>
+  <tr>
+
+        <td><p>Music &amp; More</p>
+	  <ul>
+        <li><a href="/v2/videos/list">Videos</a></li>
+		<li><a href="/v2/charts">Charts</a></li>
+		<li><a href="/v2/search">Search</a></li>
+		<li><a href="/v2/members">Members</a></li>
+
+		<li><a href="/v2/albums">Albums</a></li>
+      </ul>
+	</td>
+	     
+    <td><p>Signup Now! (Free)</p><ul>
+        <li><a href="/v2/user/artist/com_user">Artist</a></li>
+		<li><a href="/v2/user/listener/com_user">Listener</a></li>		
+      </ul>
+
+	  <p>&nbsp;</p>
+	  <p>Freebies</p><ul>
+        <li><a href="http://digitalmusicplanet.com/v2/index.php?option=com_docman&task=cat_view&gid=27&Itemid=">Download</a></li>
+		<li><a href="/v2/index.php?&amp;option=com_content&amp;view=page&amp;page=freelancewriters">Freelance Writers</a></li>
+		
+      </ul></td>
+	  
+    <td><p>Connect</p><ul>
+        <li><a href="/v2/index.php?option=com_content&amp;view=page&amp;page=linktodmp">Link To Digital Music Planet</a></li>
+
+		 <li><a href="/v2/index.php?option=com_content&amp;view=page&amp;page=advertise" >Advertise</a></li>
+		 <li><a href="http://digitalmusicplanet.com/v2/kunena" >Forum</a></li>
+		 <li><a href="http://digitalmusicplanet.com/v2/sobi2" >Weblinks</a></li>
+      </ul></td>
+    <td><p>Infos</p>
+	<ul>
+        <!--<li><a href="/v2/index.php?option=com_content&amp;view=page&amp;page=aboutus">About Us &amp; Contact</a></li>
+		 <li><a href="/v2/index.php?option=com_content&amp;view=page&amp;page=faq">Faq</a></li>
+		 <li><a href="/v2/index.php?option=com_content&amp;view=page&amp;page=terms">Terms Of Use</a></li>
+		 <li><a href="/v2/index.php?option=com_content&amp;view=page&amp;page=privacypolicy">Privacy Policy</a></li>-->
+
+		 				 <li><a href="/v2/index.php?option=com_content&amp;view=page&amp;page=terms">Terms of use</a></li>
+		 				 <li><a href="/v2/index.php?option=com_content&amp;view=page&amp;page=privacypolicy">Privacy Policy</a></li>
+		 				 <li><a href="/v2/index.php?option=com_content&amp;view=page&amp;page=faq">FAQ</a></li>
+		 				 <li><a href="/v2/index.php?option=com_content&amp;view=page&amp;page=aboutus">About Us</a></li>
+		       </ul></td>
+  </tr>
+  <tr>
+
+    <td align="center" colspan="4" valign="bottom"><p class="foot">
+			Copyright &#169; Digital Music Planet All Rights Reserved.</p></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="4" valign="bottom"><p class="foot">
+			<sup>by: </sup><a href="http://www.it-dude.com" target="_blank"><img src="/v2/../images/it-dude_s_rev_png.png" width="64" height="28" border="0" alt="it-dude.com" align="absmiddle" /></a></p></td>
+  </tr>
+
+</table>
+   </div>
+
+</div>
+</div>
+
+
+</body>
+</html>
