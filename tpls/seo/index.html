@@ -1,0 +1,64 @@
+<div class="bodyContent">
+	<h2>Seo Site Management</h2>
+	{if $errorMessage}
+		<div class="error">{$errorMessage}</div>
+	{/if}
+	<form name="frmSeo" method="post" action="">
+	<div class="tr">
+		<div class="th">Site Name: </div>
+		<div class="td">
+		  <input name="seositename" type="text" id="seositename" size="35" />
+		</div>
+	</div>
+	<div class="tr">
+		<div class="th">Site Url: </div>
+		<div class="td">
+		  <input name="seositeurl" type="text" id="seositeurl" size="35" />
+		</div>
+	</div>
+	<div class="tr">
+		<div class="th">Site Description: </div>
+		<div class="td">
+		  <textarea name="seositedescription" cols="35" rows="5" id="seositedescription"></textarea>
+		</div>
+	</div>
+	<div class="tr">
+		<div class="th"></div>
+		<div class="td">
+		  <input name="submit" type="submit" value="Add New Site" />
+		  <input type="hidden" name="user_id" value="{$smarty.cookies.user_id}" />
+		  <input type="hidden" name="MM_Insert" id="MM_Insert" value="1" />
+		  <input type="hidden" name="site_id" value="{$ID}" />
+		  <input type="hidden" name="module_id" value="{$MID}" />
+		  <input type="hidden" name="seositecreation" value="{$smarty.now|date_format:'%Y-%m-%d %H:%M:%S'}">
+		</div>
+	</div>
+	</form>
+</div>
+<div class="clear"></div>
+{if $records.totalRows > 0}
+<div class="bodyContent">
+	<h2>View All My Sites</h2>
+		<table border="1" cellspacing="1" cellpadding="5">
+		  <tr>
+			<td valign="top"><strong>Seo Site Name </strong></td>
+			<td valign="top"><strong>Seo Site Url </strong></td>
+			<td valign="top"><strong>Seo Site Description </strong></td>
+			<td valign="top"><strong>Blog Status </strong></td>
+			<td valign="top"><strong>Edit</strong></td>
+			<td valign="top"><strong>Delete</strong></td>
+		  </tr>
+				{foreach from=$records.record item=rec}
+		  <tr>
+			<td valign="top">{$rec.seositename}&nbsp;</td>
+			<td valign="top"><a href="{$rec.seositeurl}" target="_blank">{$rec.seositeurl}</a>&nbsp;</td>
+			<td valign="top">{$rec.seositedescription}&nbsp;</td>
+			<td valign="top"><a href="{$HTTPPATH}/index.php?ID={$ID}&MID={$MID}&pg=2&sid={$rec.sid}">Blog Status </a></td>
+			<td valign="top">Edit&nbsp;</td>
+			<td valign="top">Delete&nbsp;</td>
+		  </tr>
+				{/foreach}
+		</table>
+		
+</div>
+{/if}

@@ -1,1 +1,104 @@
-products
+<link rel="stylesheet" href="{$HTTPPATH}/js/jquery/datetimepicker/ui.datepicker.css" type="text/css" media="screen" title="core css file" charset="utf-8" />
+<script src="{$HTTPPATH}/js/jquery/datetimepicker/ui.datepicker.js" type="text/javascript" charset="utf-8"></script>
+<div class="bodyContent">
+	<h2>Add Product</h2>
+	<form name="frmAdd" method="post" action="">
+		<div class="tr">
+			<div class="th">Category: [<a href="index.php?MID={$MID}&pg=12">Manage Category</a>]</div>
+			<div class="td">
+			  <select name="category_id" multiple="multiple" size="5">
+			  	{$categorySelBox}
+			  </select>
+			</div>
+		</div>
+		<div class="tr">
+			<div class="th">Name:</div>
+			<div class="td">
+			  <input name="product_name" type="text" id="product_name" size="35" />
+			</div>
+		</div>
+		<div class="tr">
+			<div class="th">Description:</div>
+			<div class="td">
+			  <textarea name="product_description" cols="35" rows="5" id="product_description"></textarea>
+			</div>
+		</div>
+		<div class="tr">
+			<div class="th">Price:</div>
+			<div class="td">
+			  <input name="product_name" type="text" id="product_name" size="35" />
+			</div>
+		</div>
+		<div class="tr">
+			<div class="th">Start Date:</div>
+			<div class="td">
+			  <input name="startdate" type="text" id="startdate" size="35" value="{$DATE|date_format:'%Y-%m-%d'}" />
+			</div>
+		</div>
+		<div class="tr">
+			<div class="th">End Date:</div>
+			<div class="td">
+			  <input name="enddate" type="text" id="enddate" size="35" value="{$DATE1|date_format:'%Y-%m-%d'}" />
+			</div>
+		</div>
+		<div class="tr">
+			<div class="th">Featured:</div>
+			<div class="td">
+			  <input name="featured" type="radio" id="featured_1" value="1" /> Yes <input name="featured" type="radio" id="featured_2" value="0" checked="checked" /> No 
+			</div>
+		</div>
+		<div class="tr">
+			<div class="th">Active:</div>
+			<div class="td">
+			  <input name="status" type="radio" id="status_1" value="1" checked="checked" /> Yes <input name="status" type="radio" id="status_2" value="0" /> No 
+			</div>
+		</div>
+		<div class="tr">
+			<div class="th">Image:</div>
+			<div class="td">
+			  <input type="file" name="file" id="file" />
+			</div>
+		</div>
+		<div class="tr">
+			<div class="th"></div>
+			<div class="td">
+			  	<input type="submit" name="submit" value="Add New Product" />				
+				<input type="hidden" name="user_id" value="{$smarty.cookies.user_id}" />
+				<input type="hidden" name="MM_Insert" id="MM_Insert" value="1" />
+				<input type="hidden" name="site_id" value="{$ID}" />
+				<input type="hidden" name="module_id" value="{$MID}" />
+				<input type="hidden" name="product_date" value="{$smarty.now|date_format:'%Y-%m-%d %H:%M:%S'}">
+			</div>
+		</div>
+	</form>
+{literal}
+<script language="javascript">
+jQuery(function($){
+	$("#startdate").datepicker();
+	$("#enddate").datepicker();
+});	
+</script>
+{/literal}
+</div>
+<div class="bodyContent">
+	<h2>View Product</h2>
+	<form name="frmView" method="post" action="">
+	<div class="tr">
+		<div class="th">Field: </div>
+		<div class="td">
+		  <input name="seositename" type="text" id="seositename" size="35" />
+		</div>
+	</div>
+	</form>
+</div>
+<div class="bodyContent">
+	<h2>Edit Product</h2>
+	<form name="frmEdit" method="post" action="">
+	<div class="tr">
+		<div class="th">Field: </div>
+		<div class="td">
+		  <input name="seositename" type="text" id="seositename" size="35" />
+		</div>
+	</div>
+	</form>
+</div>

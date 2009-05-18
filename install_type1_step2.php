@@ -15,6 +15,7 @@ if($totalRows_rsModules1) {
 	do {
 		$ids[] = $row_rsModules1['module_id'];
 		$data['setting_category_type'][$row_rsModules1['module_id']] = $row_rsModules1['setting_category_type'];
+		$data['settings_seo_site_limit'][$row_rsModules1['module_id']] = $row_rsModules1['settings_seo_site_limit'];
 	} while ($row_rsModules1 = mysql_fetch_assoc($rsModules1));
 }
 if($_POST['MM_Insert']==1) {
@@ -34,13 +35,20 @@ if($_POST['MM_Insert']==1) {
 	
 	$result = array_diff($array2, $array1);
 	if($result) {
-		$sql = "insert into site_modules (`site_id`, `module_id`, `user_id`, `setting_category_type`) VALUES ";
+		$sql = "insert into site_modules (`site_id`, `module_id`, `user_id`) VALUES ";
 		foreach($result as $k=>$value) {
-			$sql .= "('".$_POST['site_id']."', '".$value."', '".$_POST['user_id']."', '".$_POST['setting_category_type'][$k]."'), ";
+			$sql .= "('".$_POST['site_id']."', '".$value."', '".$_POST['user_id']."'), ";
 			array_push($ids, $value);
 		}
 		$sql = substr($sql, 0, -2);
 		mysql_query($sql) or die('error '.__LINE__);
+	}
+	
+	if($array2) {
+		foreach($array2 as $k=>$value) {
+			$sql = "update site_modules set `setting_category_type` = '".$_POST['setting_category_type'][$k]."', `settings_seo_site_limit` = '".$_POST['settings_seo_site_limit'][$k]."' where module_id = '".$value."' and site_id = '".$_POST['site_id']."'";
+			mysql_query($sql) or die('error '.__LINE__);
+		}
 	}
 	
 	header("Location: install_type1_step3.php?site_id=".$_GET['site_id']);
@@ -80,6 +88,7 @@ $totalRows_rsModules = mysql_num_rows($rsModules);
     <td valign="top"><strong>Charges</strong></td>
     <td valign="top"><strong>Charges Recurring Type </strong></td>
     <td valign="top"><strong>Category Type</strong> </td>
+    <td valign="top"><strong>Seo Max Site Limit</strong> </td>
   </tr>
     <?php do { ?>
   <tr>
@@ -93,6 +102,7 @@ $totalRows_rsModules = mysql_num_rows($rsModules);
         <option value="Multiple" <?php if (!(strcmp("Multiple", $data['setting_category_type'][$row_rsModules['module_id']]))) {echo "selected=\"selected\"";} ?>>Multiple</option>
         <option value="None" <?php if (!(strcmp("None", $data['setting_category_type'][$row_rsModules['module_id']]))) {echo "selected=\"selected\"";} ?>>None</option>
 	  </select>&nbsp;</td>
+      <td valign="top"><input name="settings_seo_site_limit[<?php echo $row_rsModules['module_id']; ?>]" type="text" id="settings_seo_site_limit_<?php echo $row_rsModules['module_id']; ?>" value="<?php echo $data['settings_seo_site_limit'][$row_rsModules['module_id']]; ?>" /></td>
   </tr> <?php } while ($row_rsModules = mysql_fetch_assoc($rsModules)); ?>
   <tr>
     <td valign="top">&nbsp;</td>
@@ -100,6 +110,7 @@ $totalRows_rsModules = mysql_num_rows($rsModules);
       <input name="site_id" type="hidden" id="site_id" value="<?php echo $row_rsSite['site_id']; ?>" />
       <input name="MM_Insert" type="hidden" id="MM_Insert" value="1" />
       <input name="user_id" type="hidden" id="user_id" value="1" /></td>
+    <td valign="top">&nbsp;</td>
     <td valign="top">&nbsp;</td>
     <td valign="top">&nbsp;</td>
     <td valign="top">&nbsp;</td>

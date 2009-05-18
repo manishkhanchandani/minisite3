@@ -1,0 +1,38 @@
+<div class="frmDiv">
+<form action="" method="post" id="register" name="register">
+<fieldset>
+	<legend>Change Password</legend>
+	{if $errorMessage != ""}
+		<div class="errorMessage">{$errorMessage}</div>
+	{/if}
+	{if $msg != ""}
+		<div class="errorMessage">{$msg}</div>
+	{/if}
+	<ul>	
+		<li>
+			<label for="password"><span class="required">Old Password*:</span></label>
+			<input name="password" type="opassword" id="opassword" size="15" />		
+			<div class="clear"></div>
+		</li>
+		<li>
+			<label for="password"><span class="required">New Password*:</span></label>
+			<input name="password" type="password" id="password" size="15" />		
+			<div class="clear"></div>
+		</li>
+		
+		<li>
+			<label for="password"><span class="required">Confirm Password*:</span></label>
+			<input name="confirm_password" type="password" id="confirm_password" size="15" />		
+			<div class="clear"></div>
+		</li>
+		<li>
+			<label for="submit">&nbsp;</label>
+			<input type="submit" class="button" value="Change My Password" />
+			<input name="MM_Type" type="hidden" id="MM_Type" value="change" />		
+			<div class="clear"></div>
+		</li>	
+	</ul>
+</fieldset>
+<div class="clear"></div>
+</form>
+</div>

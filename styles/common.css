@@ -49,3 +49,45 @@ button, select, input, textarea {
 .bodyLinks a {
 	text-decoration: none;
 }
+.frmDiv{
+	width:550px !important;
+	}
+
+fieldset.submit
+	{
+	padding-left: 190px !important;
+	}
+
+form label{
+	padding:0px 10px;
+	width: 160px;
+	}
+
+form label.error,
+form input.submit
+	{
+	margin-left:180px !important;
+	}		
+
+form fieldset fieldset label.error
+	{
+	margin-left:0px !important;
+	width:200px !important;
+	}		
+
+
+form .centered{
+	margin-left:180px !important;
+	width:200px !important;
+	}
+
+fieldset ul li{
+	padding-top: 10px;
+	list-style-type: none;
+}
+fieldset ul li label {
+	width: 150px;
+	float: left;
+	text-align:right;
+	font-weight:bold;
+}

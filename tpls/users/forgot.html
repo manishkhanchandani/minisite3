@@ -1,0 +1,27 @@
+<div class="frmDiv">
+<form action="" method="post" id="register" name="register">
+<fieldset>
+	<legend>Forgot Password</legend>
+	{if $errorMessage != ""}
+		<div class="errorMessage">{$errorMessage}</div>
+	{/if}
+	{if $msg != ""}
+		<div class="errorMessage">{$msg}</div>
+	{/if}
+	<ul>
+		<li>
+			<label for="email"><span class="required">Email address*:</span></label>
+			<input id="email" name="email" type="text" size="32" />			
+			<div class="clear"></div>
+		</li>	
+		<li>
+			<label for="submit">&nbsp;</label>
+			<input type="submit" class="button" value="Send My Password" />
+			<input name="MM_Type" type="hidden" id="MM_Type" value="forgot" />		
+			<div class="clear"></div>
+		</li>	
+	</ul>
+</fieldset>
+<div class="clear"></div>
+</form>
+</div>

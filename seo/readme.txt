@@ -1,0 +1,1 @@
+only logged on users will be allowed to enter into the seo pages

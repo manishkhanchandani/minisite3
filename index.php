@@ -1,7 +1,7 @@
 <?php
 ini_set('memory_limit','500M');
 ini_set('max_execution_time','-1'); 
-//error_reporting(0);
+error_reporting(0);
 ob_start();
 session_start();
 
@@ -97,16 +97,18 @@ if($_GET['p']) $p = $_GET['p'].".php";
 if(!$p) {
 	$p = "home.php";
 }
+
 if($_GET['MID']) {
 	$MIDDetails = $GLOBALS['sitedetails']['modules'][$_GET['MID']];
 	if(!$MIDDetails) {
-		$p = "error.php";
-	}
-	$menuItems = json_decode($MIDDetails['pages']);
-	if($_GET['pg']) {
-		$p = $MIDDetails['ref']."/".$menuItems->$_GET['pg'].".php";
+		$p = "modulenotfound.php";
 	} else {
-		$p = $MIDDetails['ref']."/index.php";
+		$menuItems = json_decode($MIDDetails['pages']);
+		if($_GET['pg']) {
+			$p = $MIDDetails['ref']."/".$menuItems->$_GET['pg'].".php";
+		} else {
+			$p = $MIDDetails['ref']."/index.php";
+		}
 	}
 	$MID = $_GET['MID'];
 	define('MID', $MID);
@@ -123,7 +125,7 @@ include_once($p);
 if(!$body) $body = "Content Will be Displayed Here.";
 if(!$PAGEHEADING) $PAGEHEADING = "Welcome to ".$sites['sites']['sitename'];
 $smarty->assign('PAGEHEADING', $PAGEHEADING);
-/*
+
 ob_start();
 include("includes/sitetemplate/".$ID."_head.php");
 $head = ob_get_clean();
@@ -133,7 +135,7 @@ $foot = ob_get_clean();
 ob_flush();
 $smarty->assign('HEAD', $head);
 $smarty->assign('FOOT', $foot);
-*/
+
 $header = $smarty->fetch("header.html");
 $footer = $smarty->fetch("footer.html");
 echo $header.$body.$footer;
