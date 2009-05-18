@@ -62,6 +62,7 @@ $totalRows_rsView = mysql_num_rows($rsView);
 
 <body>
 <h1>Step1: Choosing Site Details</h1>
+<p><a href="template.php">Template Management </a></p>
 <form method="post" name="form1" action="<?php echo $editFormAction; ?>">
   <table>
     <tr valign="baseline">
@@ -112,6 +113,7 @@ $totalRows_rsView = mysql_num_rows($rsView);
       <td><strong>Siteemail</strong></td>
       <td><strong>Docpath</strong></td>
       <td><strong>Step 2 </strong></td>
+      <td><strong>Choose Template </strong></td>
     </tr>
     <?php do { ?>
       <tr>
@@ -120,9 +122,10 @@ $totalRows_rsView = mysql_num_rows($rsView);
         <td><?php echo $row_rsView['siteemail']; ?></td>
         <td><?php echo $row_rsView['docpath']; ?></td>
         <td><a href="install_type1_step2.php?site_id=<?php echo $row_rsView['site_id']; ?>">Step 2</a></td>
+        <td><a href="install_type1_step_template.php?site_id=<?php echo $row_rsView['site_id']; ?>">Choose Template </a></td>
       </tr>
       <?php } while ($row_rsView = mysql_fetch_assoc($rsView)); ?>
-      </table>
+  </table>
   <?php } // Show if recordset not empty ?></body>
 </html>
 <?php

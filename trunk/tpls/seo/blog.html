@@ -1,0 +1,70 @@
+{literal}
+<style type="text/css">
+.looptitle {
+
+}
+</style>
+{/literal}
+<div class="bodyContent">
+	<h2>Blog Sites</h2>
+	<div style="padding-bottom:10px;"><a href="{$HTTPPATH}/index.php?MID=3&pg=1">Back To Management</a></div>
+	<div class="tr">
+		<div class="th">
+			Site Name:
+		</div>
+		<div class="td">
+		  {$current.seositename}
+		</div>
+	</div>
+	<div class="tr">
+		<div class="th">
+			Site URL:
+		</div>
+		<div class="td">
+		  <a href="{$current.seositeurl}" target="_blank">{$current.seositeurl}</a>
+		</div>
+	</div>
+	<div class="tr">
+		<div class="th">
+			Site Description:
+		</div>
+		<div class="td">
+		  {$current.seositedescription}
+		</div>
+	</div>	
+	<div class="tr">
+		<div class="th">
+			
+		</div>
+		<div class="td">
+		  
+		</div>
+	</div>
+	<div class="tr">
+		<div class="th">
+			Blog Sites
+		</div>
+		<div class="td">
+		
+		</div>
+	</div>
+	<div class="tr">
+		<div class="th">
+			<form action="" method="post" name="frm">
+				{foreach from=$records.record item=rec}
+					<div class="looptitle"><label for="rec_{$rec.bid}"><input type="checkbox" name="rs[{$rec.bid}]" value="{$rec.bid}" id="rec_{$rec.bid}" /><a href="{$rec.blog_site}" target="myFrame">{$rec.blog_site_name}</a> {if $posted[$rec.bid] > 0}{$posted[$rec.bid]} times submitted{/if}</label></div>
+				{/foreach}
+				<br />
+				<input type="submit" name="submit" value="submit" />				
+				  <input type="hidden" name="user_id" value="{$smarty.cookies.user_id}" />
+				  <input type="hidden" name="MM_Insert" id="MM_Insert" value="1" />
+				  <input type="hidden" name="site_id" value="{$ID}" />
+				  <input type="hidden" name="module_id" value="{$MID}" />
+				  <input type="hidden" name="submissiondate" value="{$smarty.now|date_format:'%Y-%m-%d %H:%M:%S'}">
+			</form>
+		</div>
+		<div class="td">
+		  <iframe name="myFrame" width="500px" height="400px" frameborder="1" scrolling="auto" src=""></iframe>
+		</div>
+	</div>
+</div>

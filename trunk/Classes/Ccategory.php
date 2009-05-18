@@ -135,7 +135,7 @@ class Ccategory {
 				if(in_array($nav_row['category_id'], $this->selectedSelectBox)) {
 					$this->treeSelectBox .= " selected";
 				}
-				$this->treeSelectBox .= ">".$nav_row['category'] . "</option>";				// Process the main tree node
+				$this->treeSelectBox .= ">".stripslashes($nav_row['category']) . "</option>";				// Process the main tree node
 				array_push($this->excludeSelectBox, $nav_row['category_id']);		// Add to the exclusion list
 				$this->treeSelectBox .= $this->build_childSelectBox($nav_row['category_id']);		// Start the recursive function of building the child tree
 			}
@@ -161,7 +161,7 @@ class Ccategory {
 				{ 
 					$tempTree .= "&nbsp;&nbsp;&nbsp;&nbsp;"; 
 				}
-				$tempTree .= "- " . $child['category'] . "</option>";
+				$tempTree .= "- " . stripslashes($child['category']) . "</option>";
 				$this->depthSelectBox++;		// Incriment depth b/c we're building this child's child tree  (complicated yet???)
 				$tempTree .= $this->build_childSelectBox($child['category_id']);		// Add to the temporary local tree
 				$this->depthSelectBox--;		// Decrement depth b/c we're done building the child's child tree.
